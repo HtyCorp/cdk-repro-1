@@ -36,7 +36,7 @@ public class ReproPipelineStack extends Stack {
         GitHubSourceAction gitHubSource = GitHubSourceAction.Builder.create()
                 .actionName("GitHubRepoSource")
                 .output(sourceArtifact)
-                .oauthToken(SecretValue.secretsManager("GitHubToken"))
+                .oauthToken(SecretValue.secretsManager("GitHubRepoAccessToken"))
                 .owner("HtyCorp")
                 .repo("cdk-repro-1")
                 .branch("master")
