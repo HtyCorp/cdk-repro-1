@@ -9,15 +9,14 @@ phases:
   build:
     commands:
       - "mvn clean install"
-      - "mkdir gen/cloud-assembly"
-      - "cdk synth -o $CODEBUILD_SRC_DIR/gen/cloud-assembly -app 'mvn -e -q exec:java'"
-      - "echo \"Generated $(cat gen/cloud-assembly/*.template.json | wc -l) template lines\""
+      - "cdk synth"
+      - "echo \"Generated $(cat target/cloud-assembly/*.template.json | wc -l) template lines\""
   post_build:
     commands:
       - "echo \"Build completed at $(date)\""
 artifacts:
   name: "cloud-assembly"
-  base-directory: "gen/cloud-assembly"
+  base-directory: "target/cloud-assembly"
   discard-paths: no
   files:
     - "**/*"

@@ -1,0 +1,5 @@
+{
+  "app": "mvn -e -q exec:java",
+  "output": "target/cloud-assembly",
+  "@aws-cdk/core:newStyleStackSynthesis": "true"
+}
