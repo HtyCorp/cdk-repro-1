@@ -37,11 +37,11 @@
             <artifactId>cdk-pipelines</artifactId>
             <version>1.57.0</version>
         </dependency>
-        <dependency>
-            <groupId>software.amazon.awscdk</groupId>
-            <artifactId>secretsmanager</artifactId>
-            <version>1.57.0</version>
-        </dependency>
+        <!--<dependency>-->
+        <!--    <groupId>software.amazon.awscdk</groupId>-->
+        <!--    <artifactId>secretsmanager</artifactId>-->
+        <!--    <version>1.57.0</version>-->
+        <!--</dependency>-->
     </dependencies>
 
 </project>
